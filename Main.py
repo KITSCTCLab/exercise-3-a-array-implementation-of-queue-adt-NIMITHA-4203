@@ -77,10 +77,12 @@ class Solution:
             character: A character that will be pushed to the stack.
         """
         # Write your code here
-        if not self.is_stack_full:
+        if not self.is_stack_full():
             self.stack.append(character)
             self.top += 1
             
+        print(self.stack)
+        
     def enqueue_character(self, character):
         """
         Enqueue the character to queue, if queue is not full.
@@ -88,11 +90,12 @@ class Solution:
             character: A character that will be enqueued to queue.
         """
         # Write your code here
-        if not self.is_queue_full:
+        if not self.is_queue_full():
             self.queue.append(character)
             self.rear += 1
             if self.front == -1:
                 self.front += 1
+        print(self.queue)
 
     def pop_character(self):
         """
@@ -101,7 +104,8 @@ class Solution:
           The data that is popped out if the stack is not empty.
         """
         # Write your code here
-        if not self.is_stack_empty:
+        #print(self.is_stack_empty())
+        if not self.is_stack_empty():
             data = self.stack.pop()
             self.top -= 1
             return data
@@ -113,7 +117,7 @@ class Solution:
           The data that is dequeued if the queue is not empty.
         """
         # Write your code here
-        if not self.is_queue_empty:
+        if not self.is_queue_empty():
             data = self.queue[self.front]
             self.front += 1
             return data
