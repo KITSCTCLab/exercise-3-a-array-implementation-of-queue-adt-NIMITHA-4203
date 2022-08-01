@@ -143,8 +143,8 @@ If the comparison fails, set is_palindrome as False.
 '''
 # Write the necessary logic
 for index in range(length_of_text):
-    if not  solution.pop_character == solution.dequeue_character:
-        is_palidrome = False
+    if  solution.pop_character != solution.dequeue_character:
+        is_palindrome = False
 
 # finally print whether string text is palindrome or not.
 if is_palindrome:
