@@ -80,9 +80,7 @@ class Solution:
         if not self.is_stack_full():
             self.stack.append(character)
             self.top += 1
-            
-        print(self.stack)
-        
+                    
     def enqueue_character(self, character):
         """
         Enqueue the character to queue, if queue is not full.
@@ -95,7 +93,6 @@ class Solution:
             self.rear += 1
             if self.front == -1:
                 self.front += 1
-        print(self.queue)
 
     def pop_character(self):
         """
@@ -104,7 +101,6 @@ class Solution:
           The data that is popped out if the stack is not empty.
         """
         # Write your code here
-        #print(self.is_stack_empty())
         if not self.is_stack_empty():
             data = self.stack.pop()
             self.top -= 1
