@@ -114,8 +114,9 @@ class Solution:
         """
         # Write your code here
         if not self.is_queue_empty:
-            self.queue.remove(self.front)
+            data = self.queue[self.front]
             self.front += 1
+            return data
         
 
 
